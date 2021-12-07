@@ -12,18 +12,18 @@ U skripti sa SQL upitima kreirano je pet upita:
 4. Upit: Upit koji izlistava sve polaznike i naziv ustanove koju polaznik pohađa ili u kojoj radi za sve polaznike koji su potpisali ugovore na kurseve standardnog inteziteta. U ovom upitu je korišćena funkcija za rad sa nizovima karaktera - UPPER funkcija, koja menja sva mala slova u velika.
 5. Upit: Upit koji izlistava email sekretara koji je formirao ugovore za Anu Perić za kurs koji je počeo između 01.01.2020. i 31.01.2020.
 
-## Kreiranje procedura
+## SQL procedure
 U skripti za kreiranje procedura kreirane su dve procedure:
 1. procedura - Procedura prolazi kroz kompletnu listu Email adresa svih korisnika koji su registrovani u školi stranih jezika i proverava njegovu validnost. Ukoliko je u Email-u izostavljen znak "@" vrši se zamnea neispravne vrednosti sa ispisom "Email je neispravan!".
 2. procedura - Procedura prolazi kroz sve registrovane korisnike i za svakog registrovanog korisnika koji nije stranka, tj. koji nije ni polaznik, a ni potpisnik na kraj imena stavlja 'X'. Promenljive se definišu rezervisanom rečju *DECLARE*. Iskaz *SET NOCOUNT* poboljšava performanse uskladištene procedure. Prilikom pokretanja procedure poruka „xx row(s) affected“ se ne prikazuje.
 U obe procedure korišćeni su kursori.
 
-## Kreiranje funkcija
+## SQL funkcije
 U skripti za kreiranje funkcija kreirane su dve funkcije:
 1. funkcija: Kreirana je funkcija *VratiNaziv* koja za prosleđeni *no_kurs* vraća naziv vrste kursa za tu realizaciju kursa.
 2. funkcija: Kreirana funkcija vraća vrednost jedne rate za cenu kursa. Broj rata je definisan ugovorom.
 
-## Kreiranje trigera
+## SQL trigeri
 U skripti za kreiranje trigera kreirana su dva trigera:
 1. triger - Kreiran je triger koji će prilikom formiranja novog ugovora proveriti najpre kapacitet za uneti kurs i ukoliko je broj popunjenih mesta veći od kapaciteta onemogućeno je insertovanje, tj. onemogućeno je formiranje novog ugovora za traženi kurs.
 2. triger - Kreiran je triger koji zabranjuje menjanje cene kursa u periodu od 15.03.2020 do 15.05.2020.
